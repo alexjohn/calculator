@@ -17,8 +17,6 @@ typedef NS_ENUM(NSInteger, Operation) { NOOP, ADDITION, SUBTRACTION, MULTIPLICAT
 @property NSDecimalNumber *argument;
 @property Operation op;
 
-- (void)doMath;
-
 @end
 
 @implementation AJKViewController
@@ -67,18 +65,6 @@ typedef NS_ENUM(NSInteger, Operation) { NOOP, ADDITION, SUBTRACTION, MULTIPLICAT
 
 - (IBAction)operationPressed:(id)sender
 {
-    [self doMath];
-    self.op = [sender tag];
-}
-
-- (IBAction)equate
-{
-    [self doMath];
-    self.op = NOOP;
-}
-
-- (void)doMath
-{
     switch (self.op) {
         case NOOP:
             if (![self.argument isEqualToNumber:[NSDecimalNumber zero]]) {
@@ -101,6 +87,7 @@ typedef NS_ENUM(NSInteger, Operation) { NOOP, ADDITION, SUBTRACTION, MULTIPLICAT
     
     self.argument = [NSDecimalNumber zero];
     self.displayLabel.text = [self.result stringValue];
+    self.op = [sender tag];
 }
 
 @end

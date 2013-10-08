@@ -14,6 +14,5 @@
 - (IBAction)allClear;
 - (IBAction)digitPressed:(id)sender;
 - (IBAction)operationPressed:(id)sender;
-- (IBAction)equate;
 
 @end
