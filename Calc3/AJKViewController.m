@@ -8,7 +8,14 @@
 
 #import "AJKViewController.h"
 
-typedef NS_ENUM(NSInteger, Operation) { NOOP, ADDITION, SUBTRACTION, MULTIPLICATION, DIVISION };
+typedef NS_ENUM(NSInteger, Operation)
+{
+    NOOP,
+    ADDITION,
+    SUBTRACTION,
+    MULTIPLICATION,
+    DIVISION
+};
 
 @interface AJKViewController ()
 
