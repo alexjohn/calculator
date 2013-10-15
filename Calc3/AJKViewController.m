@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, Operation)
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    // i don't this this is a great place for this
+    // i don't think this is a great place for this?
     self.result = [NSDecimalNumber zero];
     self.argument = [NSDecimalNumber zero];
     self.op = NOOP;
